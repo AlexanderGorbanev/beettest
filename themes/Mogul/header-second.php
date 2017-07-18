@@ -23,7 +23,7 @@
     <body <?php body_class(); ?>>
     
         <!-- NAVIGATION -->
-        <header>
+        <header id="secondHeader">
             <a href="<?php the_field('header_top_menu_button_url', 'option'); ?>"
             class="header-button">
                 <img src="<?php the_field('header_top_menu_button_image', 'option'); ?>"
@@ -35,12 +35,13 @@
             <div class="TopNav">
                 <?php wp_nav_menu('menu=general'); ?>
             </div>
+            
             <!-- HEADER SECTION -->
             <div id="TopSection"
-            style="background: url(<?php the_field('header_section_background', 'option'); ?>);">
-                <div class="wrapper">
+            style="background: url(<?php the_field('header_second_section_background', 'option'); ?>);">
+                <div class="wrapper-right">
                     <div class="content">
-                        <img src="<?php the_field('header_section_image', 'option'); ?>"
+                        <img src="<?php the_field('header_second_light_section_image', 'option'); ?>"
                         alt="Mogul Logo" />
                     </div>
                 </div>

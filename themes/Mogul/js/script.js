@@ -16,7 +16,7 @@ $(function() {
         // SHOW/HIDE MOBILE MENU
         showHideMobileMenu: function() {
             $('#menu-general').toggle('slow', function() {
-                var $menuIcon = $('i', '#Header .mobile-menu');
+                var $menuIcon = $('i', 'header .mobile-menu');
                 if ($menuIcon.hasClass("fa-bars")) {
                     $menuIcon.removeClass("fa-bars");
                     $menuIcon.addClass("fa-times");
@@ -34,24 +34,24 @@ $(function() {
     // GLOBAL EVENTS
     
     // HEADER BUTTON
-    $('.header-button', '#Header').hover(classNamespace.animateItem, classNamespace.animateItem);
+    $('.header-button', 'header').hover(classNamespace.animateItem, classNamespace.animateItem);
     
     // FOOTER SOCIALS
-    $('img', '#Footer .socials').hover(classNamespace.animateItem, classNamespace.animateItem);
+    $('img', 'footer .socials').hover(classNamespace.animateItem, classNamespace.animateItem);
     
     // MOBILE MENU
-    $('i', '#Header .mobile-menu').on('click', classNamespace.showHideMobileMenu);
+    $('i', 'header .mobile-menu').on('click', classNamespace.showHideMobileMenu);
     
     // IN CASE OF RESIZE VIEWPORT
     $(window).resize(function() {
         
         // HIDE TOP MENU ON SMALL RESOLUTION
-        if (($(window).width() < 674) &&
+        if (($(window).width() < 809) &&
         !($('#menu-general').css("display") === "none")) {
             $('#menu-general').hide();
             
             // CHANGE MENU ICON ON BARS
-            var $menuIcon = $('i', '#Header .mobile-menu');
+            var $menuIcon = $('i', 'header .mobile-menu');
             if ($menuIcon.hasClass("fa-times")) {
                 $menuIcon.removeClass("fa-times");
                 $menuIcon.addClass("fa-bars");
@@ -59,7 +59,7 @@ $(function() {
         }
         
         // SHOW TOP MENU ON MEDIUM RESOLUTION
-        if ($(window).width() > 673) {
+        if ($(window).width() > 810) {
             $('#menu-general').show();
         }
     });
@@ -90,10 +90,10 @@ $(function() {
             // VIEWPORT WIDTH <= 1100px AND > 508px
             if (($(window).width() <= 1100) && ($(window).width() > 508)) {
                 $appointments.offset({
-                    top: $('#Header').offset().top + $('#Header').height() + 164
+                    top: $('header').offset().top + $('header').height() + 164
                 });
                 $review.offset({
-                    top: $('#Header').offset().top + $('#Header').height() + 328
+                    top: $('header').offset().top + $('header').height() + 328
                 });
                 $appointments.show();
                 $review.show();
@@ -103,10 +103,10 @@ $(function() {
                 // VIEWPORT WIDTH <= 508px
                 if ($(window).width() <= 508) {
                     $appointments.offset({
-                        top: $('#Header').offset().top + $('#Header').height() + 180
+                        top: $('header').offset().top + $('header').height() + 180
                     });
                     $review.offset({
-                        top: $('#Header').offset().top + $('#Header').height() + 180
+                        top: $('header').offset().top + $('header').height() + 180
                     });
                     $appointments.show();
                     $review.show();
@@ -115,10 +115,10 @@ $(function() {
                 // VIEWPORT WIDTH > 1100px
                 else {
                     $appointments.offset({
-                        top: $('#Header').offset().top + $('#Header').height() + 214
+                        top: $('header').offset().top + $('header').height() + 214
                     });
                     $review.offset({
-                        top: $('#Header').offset().top + $('#Header').height() + 378
+                        top: $('header').offset().top + $('header').height() + 378
                     });
                     $appointments.show();
                     $review.show();
