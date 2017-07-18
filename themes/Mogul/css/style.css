@@ -1,0 +1,164 @@
+@font-face {
+  font-family: FuturaLTLight;
+  src: url(../fonts/FuturaLT-Light_0.ttf);
+}
+@font-face {
+  font-family: FuturaLT;
+  src: url(../fonts/FuturaLT.ttf);
+}
+body {
+  font-family: FuturaLT;
+}
+body #Header {
+  font-family: Arial;
+}
+body #Header .header-button {
+  position: absolute;
+  top: 46px;
+  left: 31px;
+  text-decoration: none;
+}
+body #Header .header-button img {
+  width: 142px;
+  height: auto;
+}
+body #Header .mobile-menu {
+  display: none;
+  background-color: #e1e3e0;
+  text-align: right;
+  padding: 20px 0;
+  padding-right: 30px;
+}
+body #Header .mobile-menu i {
+  color: #878484;
+  font-size: 30px;
+}
+body #Header #menu-general {
+  list-style-type: none;
+  margin-left: 12.96vw;
+  margin-bottom: 23px;
+  padding: 0;
+}
+body #Header #menu-general li {
+  display: inline-block;
+  padding-top: 22px;
+  margin-right: 27px;
+}
+body #Header #menu-general li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #878484;
+  font-size: 12px;
+}
+body #Header #menu-general li a:hover {
+  color: black;
+  transition: 0.6s;
+}
+body #Header #TopSection {
+  background-size: cover !important;
+  background-position: center !important;
+  max-height: 680px;
+}
+body #Header #TopSection .wrapper {
+  display: flex;
+  width: 100%;
+  height: 72vh;
+}
+body #Header #TopSection .wrapper .content {
+  width: 100%;
+  height: 100%;
+  max-width: 958px;
+  max-height: 502px;
+  margin: auto;
+}
+body #Header #TopSection .wrapper .content img {
+  width: 100%;
+  height: auto;
+  margin-top: 7px;
+  margin-left: 53px;
+}
+body #Header #TopSection .wrapper-right {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  height: 40vh;
+  min-height: 230px;
+}
+body #Header #TopSection .wrapper-right .content {
+  width: 100%;
+  height: 100%;
+  max-width: 550px;
+  max-height: 290px;
+  margin: auto 0;
+  margin-right: 9px;
+}
+body #Header #TopSection .wrapper-right img {
+  width: 100%;
+  height: auto;
+}
+body #HP_Content {
+  font-family: FuturaLTLight;
+  color: #878484;
+  padding-bottom: 40px;
+}
+body #HP_Content .title-row .title {
+  margin-top: 107px;
+  font-size: 35px;
+  color: black;
+  font-weight: 600;
+}
+body #HP_Content .content_block_row .wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 739px;
+}
+body #HP_Content .content_block_row .wrapper .content_block_text {
+  margin-top: 77px;
+  font-size: 19px;
+  line-height: 29px;
+}
+body #HP_Content .content_block_row .wrapper .content_block_text.first-paragraph {
+  margin-top: 32px;
+  font-weight: 600;
+}
+body #HP_Content .content_block_row .wrapper .content_block_img {
+  margin-top: 70px;
+  width: 100%;
+  padding: 37px 39px 33px 37px;
+  border: 1px solid #404040;
+}
+body #HP_Content .content_block_row .wrapper .content_block_img img {
+  width: 100%;
+  height: auto;
+}
+body #HP_Content .content_editor_row .wrapper {
+  font-size: 22px;
+  line-height: 30px;
+  width: 100%;
+  max-width: 381px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+body #HP_Content .content_editor_row .wrapper .content_editor_photo {
+  width: 100%;
+  padding: 36px 30px 35px 32px;
+  border: 1px solid #404040;
+}
+body #HP_Content .content_editor_row .wrapper .content_editor_photo img {
+  width: 100%;
+  height: auto;
+}
+body #HP_Content .content_editor_row .wrapper .content_editor {
+  margin: 0 auto;
+  margin-top: 58px;
+  width: 100%;
+  max-width: 335px;
+}
+body #HP_Content .content_editor_row .wrapper .content_editor_contacts {
+  margin-top: 29px;
+}
+a:hover {
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  transition-property: all;
+}
