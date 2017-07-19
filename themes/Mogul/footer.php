@@ -2,7 +2,7 @@
         <footer>
             <div class="container-fluid">
                 <div class="row main-row">
-                    <div class="col-md-4 sign-up-col">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 sign-up-col">
                         <div class="wrapper">
                             <div class="title text-center">
                                 <?php the_field('footer_sign_title', 'option'); ?>
@@ -15,7 +15,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 contacts-col">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 contacts-col">
                         <div class="wrapper">
                             <div class="title text-center">
                                 <?php the_field('footer_contacts_title', 'option'); ?>
@@ -48,7 +48,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 socials-col">
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 socials-col">
                         <div class="wrapper">
                             <div class="title text-center">
                                 <?php the_field('footer_social_title', 'option'); ?>

@@ -17,7 +17,7 @@ get_header('second'); ?>
         <div class="row services-nav-row">
             <div class="col-md-12">
                 <ul id="ServicesContentNav" class="text-center">
-                    <?php $terms = get_terms('service_type');
+                    <?php $terms = get_terms('service');
                     $counter = 0;
                     foreach ($terms as $term) :
                         if ($counter === 0) : ?>
@@ -25,7 +25,7 @@ get_header('second'); ?>
                         <?php else: ?>
                             <li>
                         <?php endif; ?>
-                            <a href="<?= get_term_link($term->slug, 'service_type'); ?>">
+                            <a href="<?= get_term_link($term->slug, 'service'); ?>">
                                 <?= $term->name ?>
                             </a>
                         </li>
@@ -34,7 +34,6 @@ get_header('second'); ?>
                 </ul>
             </div>
         </div>
-
         <!-- SERVICES -->
         <?php $shownPosts = array();
         for ($i = 0; $i < 2; $i++) :
@@ -44,7 +43,7 @@ get_header('second'); ?>
                 <div class="row service-row">
             <?php endif; ?>
                 <?php $args = array(
-                    'post_type' => 'services',
+                    'post_type' => 'service_type',
                     'orderby' => 'rand'
                 );
                 $loop = new WP_Query($args);
@@ -83,8 +82,8 @@ get_header('second'); ?>
         </div>
 
         <!-- SERVICE OPTIONS -->
-        <?php if (have_rows('services_options')) :
-            while (have_rows('services_options')) : the_row();
+        <?php if (have_rows('services_option')) :
+            while (have_rows('services_option')) : the_row();
                 $optionTitle = get_sub_field('services_option_title'); ?>
                 <div class="row options-row">
                     <div class="col-md-12">
@@ -92,8 +91,8 @@ get_header('second'); ?>
                             <?= $optionTitle ?>
                         </h2>
                         <div class="options text-center">
-                            <?php if (have_rows('services_option')) :
-                                while (have_rows('services_option')) : the_row();
+                            <?php if (have_rows('services_options_option')) :
+                                while (have_rows('services_options_option')) : the_row();
                                     $optionName = get_sub_field('services_option_name');
                                     $optionPrice = get_sub_field('services_option_price'); ?>
                                     <div class="option">
