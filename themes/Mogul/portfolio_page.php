@@ -6,7 +6,7 @@ get_header('second'); ?>
         
         <!-- PAGE TITLE -->
         <div class="row title-row">
-            <div class="col-md-12">
+            <div class="col-md-12 col-sm-12 col-xs-12 ">
                 <h1 class="title text-center">
                     <?php the_field('p_title'); ?>
                 </h1>
@@ -15,13 +15,13 @@ get_header('second'); ?>
         
         <!-- GALLERY NAV -->
         <div class="row gallery-nav-row">
-            <div class="col-md-12">
+            <div class="col-md-12  col-sm-12 col-xs-12 ">
                 <?php $gallery1 = get_field_object('p_beauty');
                 $gallery2 = get_field_object('p_bridal'); 
                 $gallery3 = get_field_object('p_fashion');
                 $gallery4 = get_field_object('p_candid'); ?>
                 <ul id="PGalleryNav" class="nav nav-tabs">
-                    <li class="active first">
+                    <li class="active">
                         <a data-toggle="tab" href="#PGallery1">
                             <?= $gallery1['label'] ?>
                         </a>
@@ -45,14 +45,14 @@ get_header('second'); ?>
             </div>
         </div>
         <div class="row line-row">
-            <div class="col-md-12">
+            <div class="col-md-12 col-sm-12 col-xs-12 ">
                 <hr/>
             </div>
         </div>
         
         <!-- GALLERIES -->
         <div class="row gallery-row">
-            <div class="col-md-12">
+            <div class="col-md-12 col-sm-12 col-xs-12 ">
                 <div class="tab-content">
 
                     <!-- FIRST GALLERY -->
@@ -187,21 +187,21 @@ get_header('second'); ?>
             </div>
         </div>
         <div class="row line-row">
-            <div class="col-md-12">
+            <div class="col-md-12 col-sm-12 col-xs-12 ">
                 <hr class="bottom-line"/>
             </div>
         </div>
                     
         <!-- BOTTOM TEXT -->
         <div class="row bottom-title-row">
-            <div class="col-md-12">
+            <div class="col-md-12 col-sm-12 col-xs-12 ">
                 <h2 class="bottom-title text-center">
                     <?php the_field('p_bottom_title') ?>
                 </h2>
             </div>
         </div>
         <div class="row bottom-text-row">
-            <div class="col-md-12">
+            <div class="col-md-12 col-sm-12 col-xs-12 ">
                 <div class="bottom-text text-center">
                     <?php the_field('p_bottom_text'); ?>
                 </div>

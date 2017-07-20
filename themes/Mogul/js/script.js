@@ -63,157 +63,43 @@ $(function() {
             $('#menu-general').show();
         }
     });
-    
-    // ------------------------------
-    // ----- FEEDBACK FORM PAGE -----
-    // ------------------------------
-    if ($('#FeedbackSection').is('#FeedbackSection')) {
-        
-        // FEEDBACK FORM PAGE EVENTS
-        
-        // SUBMIT BUTTON
-        $('.submit-label', '#FeedbackSection table .submit')
-        .hover(classNamespace.animateItem, classNamespace.animateItem);
-    }
-    
+
     // ------------------------
     // ----- CONTACT PAGE -----
     // ------------------------
-    if ($('#CFeedbackSection').is('#CFeedbackSection')) {
-        
-        // POSITIONING AND SHOW AFTER POSITIONING
-        // REVIEW AND APPOINTMENT BUTTONS FUNCTION
-        function positioningButtons() {
-            var $appointments = $('#CAppointmentButton'),
-                $review = $('#CReviewButton');
-            
-            // VIEWPORT WIDTH <= 1100px AND > 508px
-            if (($(window).width() <= 1100) && ($(window).width() > 508)) {
-                $appointments.offset({
-                    top: $('header').offset().top + $('header').height() + 164
-                });
-                $review.offset({
-                    top: $('header').offset().top + $('header').height() + 328
-                });
-                $appointments.show();
-                $review.show();
-            }
-            else {
-                
-                // VIEWPORT WIDTH <= 508px
-                if ($(window).width() <= 508) {
-                    $appointments.offset({
-                        top: $('header').offset().top + $('header').height() + 180
-                    });
-                    $review.offset({
-                        top: $('header').offset().top + $('header').height() + 180
-                    });
-                    $appointments.show();
-                    $review.show();
-                }
-                
-                // VIEWPORT WIDTH > 1100px
-                else {
-                    $appointments.offset({
-                        top: $('header').offset().top + $('header').height() + 214
-                    });
-                    $review.offset({
-                        top: $('header').offset().top + $('header').height() + 378
-                    });
-                    $appointments.show();
-                    $review.show();
-                }
-            }
-        }
-        positioningButtons();
-        
-        // CLASS NAMESPACE
-        var classNamespaceContact = {
-            
-            // SHOW CURRENT CONTACT FORM
-            showContactForm: function() {
-                var $titles = $('.title', '#CFeedbackSection .title-row .wrapper'),
-                    $contactForms = $('.form', '#CFeedbackSection .feedback-form');
-                
-                // HIDE ALL CONTACT FORM TITLES
-                for (var i = 0; i < $titles.length; i++) {
-                    if (!($($titles[i]).css('display') === "none")) {
-                        $($titles[i]).fadeOut('fast');
-                    }
-                }
+    $("#CAppointmentButton").click(function() {
+        $("#CForm").css("display", "none");
+        $(".changeForm").removeClass("active");
+        $("#AForm").addClass("active");
+    });
 
-                // HIDE ALL CONTACT FORMS
-                for (var i = 0; i < $contactForms.length; i++) {
-                    if (!($($contactForms[i]).css('display') === "none")) {
-                        $($contactForms[i]).fadeOut('fast');
-                    }
-                }
-                
-                if ($(this).is('#CAppointmentButton')) {
-                    
-                    // SHOW BOOK APPOINTMENT TITLE
-                    $('.appointment', '#CFeedbackSection .title-row .wrapper')
-                    .fadeIn('slow');
-                    
-                    // SHOW BOOK APPOINTMENT CONTACT FORM
-                    $('.appointment', '#CFeedbackSection .feedback-form')
-                    .fadeIn('slow');
-                }
-                else {
-                    if ($(this).is('#CReviewButton')) {
-                        
-                        // SHOW LEAVE A REVIEW TITLE
-                        $('.review', '#CFeedbackSection .title-row .wrapper')
-                        .fadeIn('slow');
+    $("#CReviewButton").click(function() {
+        $("#CForm").css("display", "none");
+        $(".changeForm").removeClass("active");
+        $("#RForm").addClass("active");
+    });
 
-                        // SHOW LEAVE A REVIEW CONTACT FORM
-                        $('.review', '#CFeedbackSection .feedback-form')
-                        .fadeIn('slow');
-                    }
-                }
-            }
-        };
-        
-        // CONTACT PAGE EVENTS
-        
-        // BOOK APPOINTMENT BUTTON
-        $('#CAppointmentButton')
-        .hover(classNamespace.animateItem, classNamespace.animateItem);
-        $('#CAppointmentButton').on('click', classNamespaceContact.showContactForm);
-        
-        // LEAVE A REVIEW BUTTON
-        $('#CReviewButton')
-        .hover(classNamespace.animateItem, classNamespace.animateItem);
-        $('#CReviewButton').on('click', classNamespaceContact.showContactForm);
-        
-        // IN CASE OF RESIZE VIEWPORT ON CONTACT PAGE
-        $(window).resize(function() {
-
-            // CALL POSITIONING REVIEW AND APPOINTMENT BUTTONS FUNCTION
-            positioningButtons();
-        });
-    }
     
     // ------------------------
     // ----- REVIEWS PAGE -----
     // ------------------------
-    if ($('#RReviews').is('#RReviews')) {
+    if ($('#Reviews').is('#Reviews')) {
         
         // FEEDBACK FORM PAGE EVENTS
         
         // LEAVE A REVIEW BUTTON
-        $('img', '#RReviews .button-row .button')
+        $('img', '#Reviews .button-row .button')
         .hover(classNamespace.animateItem, classNamespace.animateItem);
         
         // ADDITIONAL SITES
-        $('img', '#RReviews .additional-row .site')
+        $('img', '#Reviews .additional-row .site')
         .hover(classNamespace.animateItem, classNamespace.animateItem);
     }
     
     // --------------------------
     // ----- PORTFOLIO PAGE -----
     // --------------------------
-    if ($('#PPortfolio').is('#PPortfolio')) {
+    if ($('#Portfolio').is('#Portfolio')) {
         
         // ATTACH FANCYBOX
         $(".fancybox").fancybox({

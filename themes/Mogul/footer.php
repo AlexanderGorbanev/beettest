@@ -36,11 +36,14 @@
                                 <?php if (have_rows('footer_contacts', 'option')) :
                                     while (have_rows('footer_contacts', 'option')) : the_row();
                                         $icon = get_sub_field('footer_contacts_icon');
-                                        $contact = get_sub_field('footer_contacts_contact'); ?>
+                                        $contact = get_sub_field('footer_contacts_contact');
+                                        $link = get_sub_field('footer_contacts_link'); ?>
                                         <div class="contact">
                                             <span>
-                                                <img src="<?= $icon ?>" alt="Icon"/>
-                                                <?= $contact ?>
+                                                <a class="secondColumnLink" href="<?= $link ?>">
+                                                    <img src="<?= $icon ?>" alt="Icon"/>
+                                                    <?= $contact ?>
+                                                </a>
                                             </span>
                                         </div>
                                     <?php endwhile;

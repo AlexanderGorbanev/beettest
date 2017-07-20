@@ -6,7 +6,7 @@ get_header('second'); ?>
 
         <!-- PAGE TITLE -->
         <div class="row title-row">
-            <div class="col-md-12">
+            <div class="col-md-12 col-sm-12 col-xs-12">
                 <?php do_shortcode( '[woocommerce_cart]' );?>
             </div>
         </div>

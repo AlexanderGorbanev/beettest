@@ -3,7 +3,7 @@ get_header('second'); ?>
     <section id="blogContent">
         <div class="container-fluid">
             <div class="row main-row">
-                <div class="col-md-9 col-sm-9 col-xs-9 blog-col">
+                <div class="col-md-9 col-sm-8 col-xs-12 blog-col">
                     <div class="wrapper single text-center">
                     <?php if(have_posts()) : 
                         while (have_posts()) : the_post(); ?>
@@ -20,7 +20,7 @@ get_header('second'); ?>
                     endif; ?>
                 </div>
             </div>
-            <div class="col-sm-3 sidebar-col">
+            <div class="col-sm-3  col-sm-4 col-xs-12 sidebar-col">
                     <?php if (is_active_sidebar('sidebar_side')) : ?>
                         <aside id="blogSidebar">
                             <?php dynamic_sidebar('sidebar_side'); ?>

@@ -6,7 +6,7 @@ get_header('second'); ?>
 
         <!-- PAGE TITLE -->
         <div class="row title-row">
-            <div class="col-md-12">
+            <div class="col-md-12 col-sm-12 col-xs-12 ">
                 <h1 class="title text-center">
                     <?php the_field('services_title'); ?>
                 </h1>
@@ -15,13 +15,13 @@ get_header('second'); ?>
 
         <!-- SERVICES NAVIGATION -->
         <div class="row services-nav-row">
-            <div class="col-md-12">
+            <div class="col-md-12 col-sm-12 col-xs-12 ">
                 <ul id="ServicesContentNav" class="text-center">
                     <?php $terms = get_terms('service');
                     $counter = 0;
                     foreach ($terms as $term) :
                         if ($counter === 0) : ?>
-                            <li class="first">
+                            <li>
                         <?php else: ?>
                             <li>
                         <?php endif; ?>
@@ -51,7 +51,7 @@ get_header('second'); ?>
                     $j = 0;
                     while ($loop -> have_posts()) : $loop -> the_post();
                         if (!in_array($post->ID, $shownPosts)) : ?>
-                            <div class="col-md-4 col-sm-4">
+                            <div class="col-md-4 col-sm-4 col-xs-4">
                                 <div class="wrapper">
                                     <div class="service-name text-center">
                                         <?php the_title(); ?>

@@ -59,7 +59,7 @@ function enqueue_scripts() {
     wp_enqueue_script('fancybox-script', get_template_directory_uri().'/fancybox/source/jquery.fancybox.pack.js');
     
     // ENQUEUE CUSTOM SCRIPTS
-    wp_enqueue_script('main-script', get_template_directory_uri().'/js/script.js');
+    wp_enqueue_script('main-script', get_template_directory_uri().'/js/min_script.js');
 }
 add_action('wp_enqueue_scripts', 'enqueue_scripts'); 
 

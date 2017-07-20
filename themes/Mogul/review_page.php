@@ -4,7 +4,7 @@ get_header('second'); ?>
 <section id="Reviews">
     <div class="container-fluid">
         <div class="row title-row">
-            <div class="col-md-12">
+            <div class="col-md-12 col-sm-12 col-xs-12 ">
                 <h1 class="title text-center">
                     <?php the_field('reviews_title'); ?>
                 </h1>
@@ -24,7 +24,7 @@ get_header('second'); ?>
                         $author = get_sub_field('reviews_author');
                         $location = get_sub_field('reviews_location');
                         if ($i >= $offset) : ?>
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-sm-6 col-xs-12 ">
                                 <?php if (($i % 2) === 0) : ?>
                                     <div class="wrapper left text-center">
                                 <?php else: ?>
@@ -63,19 +63,19 @@ get_header('second'); ?>
         
         <!-- BUTTON ROW -->
         <div class="row button-row">
-            <div class="col-md-12">
+            <div class="col-md-12 col-sm-12 col-xs-12 ">
                 <div class="button text-center">
-                    <a href="/feedback_forms/leave-a-review/">
-                        <img src="<?php the_field('r_button_image'); ?>" 
+                    <a href="/contact/">
+                        <img src="<?php the_field('r_button_image'); ?>"
                         alt="Review Button"/>
                     </a>
                 </div>
             </div>
         </div>
         <div class="row additional-row">
-            <div class="col-md-12">
+            <div class="col-md-12 col-sm-12 col-xs-12 ">
                 <div class="additional-title">
-                    <h2 class="text-center">
+                    <h2>
                         <?php the_field('r_additional_title'); ?>
                     </h2>
                 </div>

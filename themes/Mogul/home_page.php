@@ -6,7 +6,7 @@ get_header(); ?>
     <!-- TITLE -->
     <div class="container-fluid">
         <div class="row title-row">
-            <div class="col-md-12">
+            <div class="col-md-12 col-sm-12 col-xs-12">
                 <h1 class="title text-center">
                     <?php the_field('home_page_content_title'); ?>
                 </h1>
@@ -50,7 +50,7 @@ get_header(); ?>
                     </div>
                     <div class="content_editor_contacts text-center">
                         <a class="content_editor_contacts_mail" href="mailto:<?php the_field('home_page_content_editor_mail'); ?>"><?php the_field('home_page_content_editor_mail'); ?></a>
-                        <p class="content_editor_contacts_other"><?php the_field('home_page_content_editor_other'); ?></p>
+                        <a class="content_editor_contacts_other" href="tel:<?php the_field('home_page_content_editor_other'); ?>"><?php the_field('home_page_content_editor_other'); ?></a>
                     </div>
                 </div>
             </div>
